@@ -1,0 +1,23 @@
+.news-title {
+    font-weight: bold !important;
+   }
+   .news-descr {
+    font-size: 10px !important;
+   }
+   
+   
+   h2 {
+       font-size: px !important; 
+   }
+
+   .news-card:hover {
+       cursor: pointer;
+   }
+
+   .source {
+       font-style: italic !important;
+   }
+
+   .bg-mute {
+       background-color: rgb(240, 235, 235);
+   }
