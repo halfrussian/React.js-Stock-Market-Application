@@ -22,6 +22,7 @@ const Trades = () => {
     const [funds, setFunds] = useState(10500)
     const [results, setResults] = useState([]);
     const [buyingArray, setBuyingArray] = useState([])
+    const [tableUrl, setTableUrl] = useState('')
     const [account, setAccount] = useState([
 
         {
@@ -87,26 +88,30 @@ let url = 'https://finnhub.io/api/v1/quote?symbol=' + input + "&token=c64nvoiad3
       }    
        
 
-       const buyThis = () => {
-      //console.log(buyingArray)
-       }
+    
 
 
     useEffect(() => {
-  
-        const tableUrl = "https://finnhub.io/api/v1/quote?symbol=" + Symbol + "&token=c63j22aad3id43aa8k40"
-        buyingArray.map(({Symbol, Shares, TotalCost}) => {
+        const fetchedResults = [];
+
+        buyingArray.map((Symbol, Shares, TotalCost) => {
+          setTableUrl("https://finnhub.io/api/v1/quote?symbol=" + buyingArray[0].Symbol + "&token=c64nvoiad3idic8sc3s0")
           fetch(tableUrl)
           .then((res) => res.json())
-          .then((data) => setResults({
-            Symbol,
-            Shares,
-            TotalCost,
-            'Position': data.c
-          }))
-        }); 
-       console.log(results)
-    }, [account])
+            .then((data) => fetchedResults.push(Symbol, data.c) 
+          
+           )
+        }
+      )
+
+      setResults(fetchedResults)
+    }, [])
+
+    const buyThis = () => {
+      console.log(buyingArray[0].Symbol)
+      console.log(tableUrl)
+      console.log(results)
+     }
 
     return (
         <>

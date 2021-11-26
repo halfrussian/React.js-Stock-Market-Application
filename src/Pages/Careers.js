@@ -48,10 +48,10 @@ const Careers = ()=> {
     return (
         <section>
         <Navbar />
-
+<MainStockHeader />
         <Wrapper>
             <div className="container-fluid">
-                <h1 className='text-center mt-5 mb-4'>We're not currently hiring...<br /> but our clients are</h1>
+                <h1 className='text-center mt-5 mb-5'>We're not currently hiring...<br /> but our clients are</h1>
                 <div className="row">
                    {/* buttons */}
                    <div className="btn-container text-center">
@@ -69,14 +69,14 @@ const Careers = ()=> {
                 </div>
                 <div className="row">
                     <div className="col-xl-3 col-lg-2"></div>
-                    <div className="col-xl-6">
+                    <div className="col-xl-6 mb-4">
                    {/* job article */}
                     <article className='job-info'>
                         <h3>{title}</h3>
                         <h4>{company}</h4>
                         <p className="job-date">{dates}</p>
                         {duties.map((duty, index)=>{
-                            return <div key={index} className='job-desc mb-5'>
+                            return <div key={index} className='job-desc mb-3'>
                     
                                 <p>{duty}</p>
                             </div>
@@ -103,7 +103,7 @@ const Wrapper = styled.div`
 }
 
 .job-btn {
-  color: red;
+  color: #r4F7942;
   font-size: 23px;
   margin-bottom: 20px;
 
@@ -114,7 +114,6 @@ const Wrapper = styled.div`
 }
 .active-btn {
 color: green;   
-font-weight: bold !important;         
 }
 
 `
