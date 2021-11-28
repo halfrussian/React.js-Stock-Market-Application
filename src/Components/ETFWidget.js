@@ -20,7 +20,7 @@ useEffect(()=> {
     return (
       <Wrapper>
         <section className=''>
-        <h2 className='text-center text-dark mt-5 mb-4  top-title'>Quote an ETF</h2>
+        <h2 className='text-center text-dark mt-5 mb-4  top-title'></h2>
         <div className='container-fluid mx-auto  mt-5'>
           <div className='row '>
             <div className="col-xl-2 col-lg-2 col-md-1"></div>

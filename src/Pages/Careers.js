@@ -50,8 +50,19 @@ const Careers = ()=> {
         <Navbar />
 <MainStockHeader />
         <Wrapper>
-            <div className="container-fluid">
-                <h1 className='text-center mt-5 mb-5'>We're not currently hiring...<br /> but our clients are</h1>
+
+        <div className="container-fliud mt-5">
+          <div className="row text-center">
+            <div className="col-12">
+            <h1 className='mt-5 open-title'>Current Openings</h1>
+              <p className='pos-p'>No positions available</p>
+            </div>
+          </div>
+        </div>
+            <div className="container-fluid bg-muted ">
+            <div className="row">
+                <h1 className='text-center mt-3 mb-4 head-title'>Our client's that are hiring</h1>
+                </div>
                 <div className="row">
                    {/* buttons */}
                    <div className="btn-container text-center">
@@ -68,8 +79,8 @@ const Careers = ()=> {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-xl-3 col-lg-2"></div>
-                    <div className="col-xl-6 mb-4">
+                    <div className="col-xl-2 col-lg-2"></div>
+                    <div className="col-xl-8 mb-4">
                    {/* job article */}
                     <article className='job-info'>
                         <h3>{title}</h3>
@@ -77,13 +88,13 @@ const Careers = ()=> {
                         <p className="job-date">{dates}</p>
                         {duties.map((duty, index)=>{
                             return <div key={index} className='job-desc mb-3'>
-                    
                                 <p>{duty}</p>
                             </div>
                         } )}
                     </article>
+                    <button className='btn btn-success rounded-pill px-5 mb-4' onClick={()=> window.open('https://www.indeed.com/q-Front-End-Engineer-jobs.html?vjk=4d50d246da269890')}>Apply Now</button>
                     </div>
-                    <div className="col-xl-3 col-lg-2"></div>
+                    <div className="col-xl-2 col-lg-2"></div>
                 </div>
             </div>
         </Wrapper>
@@ -114,7 +125,19 @@ const Wrapper = styled.div`
 }
 .active-btn {
 color: green;   
+
 }
+.bg-muted {
+    background-color:#F0F0F0;
+}
+
+.open-title {
+  margin-bottom: 5%;
+}
+.pos-p{
+  margin-bottom: 15% ;
+}
+
 
 `
 

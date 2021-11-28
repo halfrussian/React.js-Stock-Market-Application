@@ -21,8 +21,8 @@ function Navbar() {
   
   <div class="nav-links">
     <Link to='/'>Home</Link>
-    <Link to='/quotes'>Quotes</Link>
-    <Link to='/trade'>Trade</Link>
+    <Link to='/quotes'>The Market</Link>
+   <Link to='/news'> News</Link>
     <Link to='/about'>About Us</Link>
     <Link to='/contact'>Contact Us</Link>
     <Link to='/careers'>Careers</Link>

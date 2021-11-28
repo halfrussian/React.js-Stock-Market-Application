@@ -45,7 +45,7 @@ const Trades = () => {
 
 
    //let url = 'https://finnhub.io/api/v1/quote?symbol=' + input + "&token=c63j22aad3id43aa8k40";
-let url = 'https://finnhub.io/api/v1/quote?symbol=' + input + "&token=c64nvoiad3idic8sc3s0";
+let url = 'https://finnhub.io/api/v1/quote?symbol=' + input + "&token=c63j22aad3id43aa8k40";
     
     function getData() {
     
@@ -93,7 +93,7 @@ let url = 'https://finnhub.io/api/v1/quote?symbol=' + input + "&token=c64nvoiad3
 
     useEffect(() => {
         const fetchedResults = [];
-
+//c64nvoiad3idic8sc3s0
         buyingArray.map((Symbol, Shares, TotalCost) => {
           setTableUrl("https://finnhub.io/api/v1/quote?symbol=" + buyingArray[0].Symbol + "&token=c64nvoiad3idic8sc3s0")
           fetch(tableUrl)
@@ -111,6 +111,7 @@ let url = 'https://finnhub.io/api/v1/quote?symbol=' + input + "&token=c64nvoiad3
       console.log(buyingArray[0].Symbol)
       console.log(tableUrl)
       console.log(results)
+      console.log(results[1])
      }
 
     return (
@@ -195,12 +196,12 @@ let url = 'https://finnhub.io/api/v1/quote?symbol=' + input + "&token=c64nvoiad3
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {results.map(({Symbol, Shares, TotalCost, Content}) => (
+                                {results.map(({Symbol, Shares, TotalCost}) => (
                                     <tr>
                                         <td>{Symbol}</td>
                                         <td>{Shares}</td>  
                                         <td>${TotalCost}</td>
-                                        <td>{Content}</td>
+                                        <td>{results[1]}</td>
                                     </tr>
                                   ))}
 

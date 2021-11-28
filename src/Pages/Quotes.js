@@ -6,6 +6,7 @@ import Footer from '../Components/Footer'
 import ETFWidget from '../Components/ETFWidget'
 import { useEffect, useState } from 'react';
 import Chart from '../Components/Chart';
+import CompanyNews from '../Components/CompanyNews';
 
 
 const Quotes = ()=> {
@@ -17,10 +18,10 @@ const Quotes = ()=> {
     return (
       <Wrapper>
         <Navbar />
-        <MainStockHero />
+        {/* <MainStockHero/> */}
 
-        <div className='container-fluid mx-auto'>
-        <h1 className='text-center text-dark mt-5 mb-4 top-title'>Quote a Stocks</h1>
+        <div className='container-fluid mx-auto mt-5'>
+        
         <Chart />
  
         </div>
@@ -42,7 +43,6 @@ const Quotes = ()=> {
 
 
         <ETFWidget /> 
-        
         <Footer />
 
         </Wrapper>
