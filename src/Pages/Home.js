@@ -5,6 +5,7 @@ import { BsPhone } from 'react-icons/bs'
 import {BiPhoneCall } from 'react-icons/bi'
 import {CgRedo } from 'react-icons/cg'
 import Footer from '../Components/Footer'
+import LoginButton from "../Components/LoginButton";
 function Home() {
     return (
         <Wrapper>
@@ -20,6 +21,7 @@ function Home() {
 
                     <div className="col-xl-4 col-lg-4 col-md-5 mt-4"> 
                         <h2 class=''>Why Money Works...</h2>
+                        <LoginButton />
                         <p className='paragraph '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                             Ratione aliquid, aspernatur soluta 
                             consequuntur saepe, praesentium. 

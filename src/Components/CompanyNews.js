@@ -16,7 +16,7 @@ const CompanyNews = () => {
 function actuallyFetch() {
   setLoading(true)
   setFinalInput(input)
-let newsUrl = 'https://finnhub.io/api/v1/company-news?symbol=' + finalInput + '&from=2021-10-01&to=2021-10-10&token=c63j22aa`d`3id43aa8k40'
+let newsUrl = 'https://finnhub.io/api/v1/company-news?symbol=' + finalInput + '&from=2021-10-01&to=2021-10-10&token=c63j22aad3id43aa8k40'
    fetch(newsUrl)
          .then(res => res.json())
          .then(newsData => {
@@ -36,9 +36,6 @@ let newsUrl = 'https://finnhub.io/api/v1/company-news?symbol=' + finalInput + '&
   
  }, [])
 
-const nothing = () => {
-  return null
-}
 
     return (
         <Wrapper>

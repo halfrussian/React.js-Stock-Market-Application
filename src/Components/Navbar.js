@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
-
+import LoginButton from "./LoginButton";
 function Navbar() {
 
     return (
@@ -26,6 +26,7 @@ function Navbar() {
     <Link to='/about'>About Us</Link>
     <Link to='/contact'>Contact Us</Link>
     <Link to='/careers'>Careers</Link>
+    <Link to='/login'><LoginButton/> </Link>
   </div>
 </div>
 </Wrapper>
