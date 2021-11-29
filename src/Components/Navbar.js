@@ -48,7 +48,6 @@ return (
       <Link to='/news'>News</Link>
       <Link to='/about'>About Us</Link>
       <Link to='/contact'>Contact Us</Link>
-      <Link to='/careers'>Careers</Link>
       <Link to='/'><LogoutButton /></Link>
       </>
      ) : (
@@ -56,7 +55,6 @@ return (
       <Link to='/'>Home</Link>
       <Link to='/about'>About Us</Link>
       <Link to='/contact'>Contact Us</Link>
-      <Link to='/careers'>Careers</Link>
       <Link to='/'><LoginButton/></Link> 
       </>
      )
