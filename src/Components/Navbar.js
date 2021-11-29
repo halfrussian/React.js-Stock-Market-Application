@@ -2,9 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
+import Profile from "./Profile";
+import {useAuth0} from '@auth0/auth0-react'
+
 function Navbar() {
 
-    return (
+  const { isAuthenticated} = useAuth0();
+  const {isLoading} = useAuth0()
+if(isLoading) return (
+  <>
+  <div className="container-fluid text-center mt-5">
+    <div className="row text-center mt-5">
+      <div className="col-12 text-center mt-5">
+        <div class="spinner-border text-success mt-5" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </>
+)
+
+return (
 <Wrapper>
   <div class="nav">
     <input type="checkbox" id="nav-check" />
@@ -20,13 +40,32 @@ function Navbar() {
   </div>
   
   <div class="nav-links">
-    <Link to='/'>Home</Link>
-    <Link to='/quotes'>The Market</Link>
-   <Link to='/news'> News</Link>
-    <Link to='/about'>About Us</Link>
-    <Link to='/contact'>Contact Us</Link>
-    <Link to='/careers'>Careers</Link>
-    <Link to='/login'><LoginButton/> </Link>
+
+    {isAuthenticated ?(
+    <>
+      <Link to='/'>Home</Link>
+      <Link to='/quotes'>The Market</Link>
+      <Link to='/news'>News</Link>
+      <Link to='/about'>About Us</Link>
+      <Link to='/contact'>Contact Us</Link>
+      <Link to='/careers'>Careers</Link>
+      <Link to='/'><LogoutButton /></Link>
+      </>
+     ) : (
+       <>
+      <Link to='/'>Home</Link>
+      <Link to='/about'>About Us</Link>
+      <Link to='/contact'>Contact Us</Link>
+      <Link to='/careers'>Careers</Link>
+      <Link to='/'><LoginButton/></Link> 
+      </>
+     )
+    }
+
+    
+
+
+    {/* <Profile /> */}
   </div>
 </div>
 </Wrapper>
@@ -100,7 +139,7 @@ body {
   z-index: 999999;
 }
 
-@media (max-width:1111px) {
+@media (max-width:1239px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;

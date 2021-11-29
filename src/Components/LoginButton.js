@@ -1,20 +1,24 @@
 import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import styled from 'styled-components';
+
+
+
 const LoginButton = () => {
-const {loginWithRedirect} = useAuth0();
-
-
+     
+  const {loginWithRedirect, isAuthenticated} = useAuth0();
   return (
-    <Wrapper>
 
-    
+
+    !isAuthenticated && (
+    <Wrapper>
     <div>
       <button onClick={()=> loginWithRedirect()} className='btn text-white'>
         Login
       </button>
     </div>
     </Wrapper>
+    )
   )
 }
 

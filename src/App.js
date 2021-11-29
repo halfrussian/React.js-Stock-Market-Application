@@ -6,7 +6,7 @@ import News from './Pages/News';
 import Quotes from './Pages/Quotes';
 import Careers from './Pages/Careers';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
+import {useAuth0} from '@auth0/auth0-react'
 
 function App() {
   return (

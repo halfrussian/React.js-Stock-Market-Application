@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 //first API key -> joshm "https://finnhub.io/api/v1/quote?symbol=AAPL&token=c63j22aad3id43aa8k40"
 //second API Key -> jsh  "https://finnhub.io/api/v1/quote?symbol=TSLA&token=c64nvoiad3idic8sc3s0"
-//const url = "https://finnhub.io/api/v1/quote?symbol=AAPL&token=c64nvoiad3idic8sc3s0"
-const url = 'abc'
+const url = "https://finnhub.io/api/v1/quote?symbol=AAPL&token=c64nvoiad3idic8sc3s0"
 
 const CardApple  = () => {
 

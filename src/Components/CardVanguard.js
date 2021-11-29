@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 
 
-//const url = "https://finnhub.io/api/v1/quote?symbol=VTI&token=c63j22aad3id43aa8k40"
-const url = 'abc'
+const url = "https://finnhub.io/api/v1/quote?symbol=VTI&token=c63j22aad3id43aa8k40"
+
 
 const CardApple  = () => {
 

@@ -16,12 +16,13 @@ const CompanyNews = () => {
 function actuallyFetch() {
   setLoading(true)
   setFinalInput(input)
-let newsUrl = 'https://finnhub.io/api/v1/company-news?symbol=' + finalInput + '&from=2021-10-01&to=2021-10-10&token=c63j22aad3id43aa8k40'
+let newsUrl = 'https://finnhub.io/api/v1/company-news?symbol=' + input + '&from=2021-10-01&to=2021-10-10&token=c63j22aad3id43aa8k40'
    fetch(newsUrl)
          .then(res => res.json())
          .then(newsData => {
-           setLoading(false)
+           
           setDataArray(newsData)
+          setLoading(false)
         })
         .catch((error)=> {
           console.log(error)
@@ -47,9 +48,9 @@ let newsUrl = 'https://finnhub.io/api/v1/company-news?symbol=' + finalInput + '&
             <div className="col-xl-2 col-lg-2 col-md-1"></div>
             <div className="col-xl-8 col-lg-8 col-md-10 text-center">
             <h1 className='text-center mb-5'>Stock News</h1>
-            <p>Disclaimer: This is connected to a free API and can take time to load with too many API calls </p>
+            <p>Try Searching a Stock Symbol like AAPL, TSLA, or O</p>
               <div class="input-group">
-                <input type="text" className="form-control" placeholder="TSLA" value={input} onInput={e => setInput(e.target.value, console.log(input))} />
+                <input type="text" className="form-control" placeholder="TSLA" value={input} onInput={e => setInput(e.target.value, console.log(input), console.log(finalInput))} />
                 <button type="button" class="searchButton btn p-2  bg-success text-white" id="searchButton" onClick={actuallyFetch}>Fetch the News</button>
               </div>
             </div>
