@@ -51,7 +51,7 @@ const Careers = ()=> {
 <MainStockHeader />
         <Wrapper>
 
-        <div className="container-fliud mt-5">
+        <div className="container-fliud mt-4 bg-muted">
           <div className="row text-center">
             <div className="col-12">
             <h1 className='mt-5 open-title'>Current Openings</h1>
@@ -135,7 +135,7 @@ color: green;
   margin-bottom: 5%;
 }
 .pos-p{
-  margin-bottom: 15% ;
+  margin-bottom: 8% ;
 }
 
 

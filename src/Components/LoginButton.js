@@ -24,7 +24,7 @@ const LoginButton = () => {
 
 const Wrapper = styled.div`
 .btn{
-  padding: 0;
+  padding: 0px;
   font-size: 17px ;
 }
 

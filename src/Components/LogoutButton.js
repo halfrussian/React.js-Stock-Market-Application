@@ -22,7 +22,7 @@ const LogoutButton = () => {
 
 const Wrapper = styled.div`
 .btn{
-
+  padding: 0px;
   font-size: 17px ;
 }
 
